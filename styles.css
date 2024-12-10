@@ -1,0 +1,45 @@
+﻿/*
+FILE          : styles.css
+PROJECT       : Web Design and Development Assignment 6
+PROGRAMMER    : Bilal Syed
+FIRST VERSION : 2024-12-04
+DESCRIPTION   : This file contains the definitions for all the different CSS classes that
+                are used throughout the web app.
+*/
+
+/*centers the body and any elements in it*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+/*can be used to center any specific text in an element*/
+.center {
+    text-align: center;
+}
+
+/*keyframe animation used to create a blinking affect*/
+@keyframes blink {
+    0% {
+        opacity: 1; /*at the start of the keyframe, the text is visible*/
+    }
+
+    50% {
+        opacity: 0; /*halfway through the keyframe the text isn't visible*/
+    }
+
+    100% {
+        opacity: 0; /*at the end of the keyfram the text isn't visible*/
+    }
+}
+
+/*class used to apply the blinking keyframe animation to some text*/
+.blinking-text {
+    /*text-align: center;*/
+    color: red;
+    animation: blink 0.25s ease-in-out 5; /*the duration of the animation is 0.25 seconds, the animation runs 5 times and then stops*/
+}
